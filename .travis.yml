@@ -36,5 +36,7 @@ after_script:
   - emulator -avd test -no-skin -no-audio -no-window &
   - android-wait-for-emulator
   - adb shell input keyevent 82 &
+  - ls $ANDROID_HOME/system-images/android-22/default/armeabi-v7a/
+  - echo $ANDROID_SDK_ROOT
   # now run the tests
   - ./gradlew cAT
